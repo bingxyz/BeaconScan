@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:id="@+id/contentTouch"
+    tools:context="gs.ibeacon.fcu.beaconscan.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/uuid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Uuid"
+        android:textColor="#33b5e5"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/uuidText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="uuid"
+        android:textColor="@color/TextColor"
+        android:textSize="30dp"
+        android:layout_below="@+id/uuid"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/rssi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Rssi"
+        android:textColor="#33b5e5"
+        android:textSize="40dp"
+        android:layout_below="@+id/uuidText"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/rssiText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Rssi"
+        android:textColor="@color/TextColor"
+        android:textSize="30dp"
+        android:layout_below="@+id/rssi"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Major"
+        android:textColor="#33b5e5"
+        android:textSize="40dp"
+        android:layout_below="@+id/rssiText"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/majorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Major"
+        android:textColor="@color/TextColor"
+        android:textSize="30dp"
+        android:layout_below="@+id/major"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/minor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Minor"
+        android:textColor="#33b5e5"
+        android:textSize="40dp"
+        android:layout_below="@+id/majorText"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/minorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Minor"
+        android:textColor="@color/TextColor"
+        android:textSize="30dp"
+        android:layout_below="@+id/minor"
+        android:textStyle="bold" />
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="left|bottom">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/bluetooth_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="藍芽開關" />
+
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>
